@@ -45,13 +45,13 @@ Stops the RainbowColors:
 `Preferences -> Settings -> Extensions -> RainbowColors`
 
 | Name                                | Description                                                                                                    | Default Value                    |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------- | --- |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | rainbowColors.interval              | The interval (in seconds) between change the colors.                                                           | 5                                |
 | `rainbowColors.mode`                | Defines which color change is to be carried. out.                                                              |                                  |
 | `rainbowColors.interval`            | The interval (in seconds) between change the colors.                                                           |                                  |
 | `rainbowColors.numberOfColors`      | Specifies the number of colors to be used for generating the rainbow colors.                                   |                                  |
 | `rainbowColors.background`          | Defines which background areas should be changed.                                                              |                                  |
-| `rainbowColors.foreground`          | Defines which foreground (border                                                                               | shadow) areas are to be changed. |     |
+| `rainbowColors.foreground`          | Defines which foreground (border                                                                               | shadow) areas are to be changed. |
 | `rainbowColors.colorCustomizations` | This is the original colorCustomizations setting. (Overrides colors from the currently selected color theme.). |                                  |
 
 ![Settings](doc/images/settings.png)
