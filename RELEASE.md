@@ -1,6 +1,7 @@
-# [0.0.2]
+# [0.0.3]
 
 ## Maintenance
 
-- Updated README.md.
-- Added browser entry point.
+- Use rainbow-colors-array-ts instead of rainbow-colors-array.
+- Added and updated VSCode internal launch and task.
+- Tidied Package.

@@ -2,7 +2,7 @@
   "name": "RainbowColors",
   "displayName": "Rainbow Colors",
   "description": "This extension changes the foreground or background color rainbowly after a certain interval.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "dennykorsukewitz",
   "icon": "doc/images/icon.png",
   "license": "SEE LICENSE IN LICENSE",
@@ -43,10 +43,11 @@
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "watch-web": "npm run esbuild-base -- --sourcemap"
   },
   "dependencies": {
-    "rainbow-colors-array": "^0.0.31",
+    "rainbow-colors-array-ts": "^1.1.2",
     "simple-color-converter": "^2.1.13"
   },
   "devDependencies": {

@@ -7,7 +7,7 @@
 // https://code.visualstudio.com/api/references/theme-color
 
 import * as vscode from 'vscode';
-const rca = require("rainbow-colors-array");
+import { rainbow } from "rainbow-colors-array-ts";
 const simpleColorConverter = require('simple-color-converter');
 
 let rainbowColors: string[];
@@ -122,7 +122,7 @@ function getColors() {
     }
 
     if (!rainbowColors) {
-        var rainbowColorsArray = rca(numberOfColors, "hex", false);
+        var rainbowColorsArray = rainbow(numberOfColors, "hex", false);
         rainbowColors = rainbowColorsArray.map((color: { hex: string }) => color.hex);
     }
     let primaryColor = '#' + rainbowColors[counter];
