@@ -2,6 +2,12 @@
 
 All notable changes to the "RainbowColors" extension will be documented in this file.
 
+## [0.0.4]
+
+### Maintenance
+
+- Tidied Package and fixed small bug.
+
 ## [0.0.3]
 
 ### Maintenance
