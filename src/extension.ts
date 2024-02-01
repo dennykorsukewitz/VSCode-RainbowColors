@@ -125,7 +125,7 @@ function getColors() {
         var rainbowColorsArray = rainbow(numberOfColors, "hex", false);
         rainbowColors = rainbowColorsArray.map((color: { hex: string }) => color.hex);
     }
-    let primaryColor = '#' + rainbowColors[counter];
+    let primaryColor = rainbowColors[counter];
     let complementaryColor = getComplementaryColor(primaryColor);
     let colors = {
         primaryColor: primaryColor,
@@ -151,7 +151,7 @@ function getComplementaryColor(color: string) {
         hexRef: true,
     });
 
-    let complementaryColor = '#' + destinationColor.color;
+    let complementaryColor = destinationColor.color;
 
     return complementaryColor;
 }

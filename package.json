@@ -30,9 +30,9 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "browser": "./dist/extension.js",
+  "activationEvents": [],
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base -- --minify",
     "esbuild": "npm run esbuild-base -- --sourcemap",
