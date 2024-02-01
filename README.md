@@ -23,7 +23,7 @@ I created this extension because I wanted to learn or expand my knowledge of the
 
 | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-RainbowColors/0.0.1/dev)](https://github.com/dennykorsukewitz/VSCode-RainbowColors/compare/0.0.1...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
+| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-RainbowColors/0.0.2/dev)](https://github.com/dennykorsukewitz/VSCode-RainbowColors/compare/0.0.2...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
 
 ## Feature
 
@@ -44,15 +44,14 @@ Stops the RainbowColors:
 
 `Preferences -> Settings -> Extensions -> RainbowColors`
 
-| Name                                | Description                                                                                                    | Default Value                    |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| rainbowColors.interval              | The interval (in seconds) between change the colors.                                                           | 5                                |
-| `rainbowColors.mode`                | Defines which color change is to be carried. out.                                                              |                                  |
-| `rainbowColors.interval`            | The interval (in seconds) between change the colors.                                                           |                                  |
-| `rainbowColors.numberOfColors`      | Specifies the number of colors to be used for generating the rainbow colors.                                   |                                  |
-| `rainbowColors.background`          | Defines which background areas should be changed.                                                              |                                  |
-| `rainbowColors.foreground`          | Defines which foreground (border                                                                               | shadow) areas are to be changed. |
-| `rainbowColors.colorCustomizations` | This is the original colorCustomizations setting. (Overrides colors from the currently selected color theme.). |                                  |
+| Name                                | Description                                                                                                    | Default Value |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------- |
+| `rainbowColors.mode`                | Defines which color change is to be carried. out.                                                              | Foreground    |
+| `rainbowColors.interval`            | The interval (in seconds) between change the colors.                                                           | 5             |
+| `rainbowColors.numberOfColors`      | Specifies the number of colors to be used for generating the rainbow colors.                                   | 100           |
+| `rainbowColors.background`          | Defines which background areas should be changed.                                                              |               |
+| `rainbowColors.foreground`          | Defines which foreground (borders and shadows) areas are to be changed.                                        |               |
+| `rainbowColors.colorCustomizations` | This is the original colorCustomizations setting. (Overrides colors from the currently selected color theme.). |               |
 
 ![Settings](doc/images/settings.png)
 
