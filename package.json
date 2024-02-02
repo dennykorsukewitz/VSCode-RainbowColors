@@ -35,16 +35,14 @@
   "activationEvents": [],
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base -- --minify",
-    "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
-    "test": "vscode-test",
-    "pretest": "rm -Rf .vscode-test && npm run esbuild-base && npm run lint",
-    "lint": "eslint src --ext ts",
-    "lint-fix": "eslint src --ext ts --fix",
-    "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "watch-web": "npm run esbuild-base -- --sourcemap"
+    "compile": "tsc -p ./",
+    "compile-web": "npm run esbuild-base -- --sourcemap",
+    "lint": "eslint src --ext ts",
+    "lint-fix": "eslint src --ext ts --fix"
   },
   "dependencies": {
     "rainbow-colors-array-ts": "^1.1.2",
@@ -57,7 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.20.0",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8",
+    "@vscode/test-electron": "^2.3.9",
     "esbuild": "^0.20.0",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
