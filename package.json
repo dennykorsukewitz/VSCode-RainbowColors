@@ -39,8 +39,8 @@
     "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
     "watch": "tsc -watch -p ./",
-    "compile": "tsc -p ./",
-    "compile-web": "npm run esbuild-base -- --sourcemap",
+    "build": "tsc -p ./",
+    "build-web": "npm run esbuild-base -- --sourcemap",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix"
   },
