@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       VSC_NAME:
-        required: true
+        required: false
         type: string
 
 jobs:
