@@ -2,7 +2,7 @@
 
 # RainbowColors
 
-**RainbowColors** is an extension that changes the foreground or background color rainbowly after a certain interval.
+**RainbowColors** is an extension that changes the foreground or background color rainbowly after a certain interval or a few keystrokes have been made.
 
 ## Why???
 
@@ -23,7 +23,7 @@ I created this extension because I wanted to learn or expand my knowledge of the
 
 | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-RainbowColors/0.0.4/dev)](https://github.com/dennykorsukewitz/VSCode-RainbowColors/compare/0.0.4...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
+| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-RainbowColors/1.0.0/dev)](https://github.com/dennykorsukewitz/VSCode-RainbowColors/compare/1.0.0...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
 
 ## Feature
 
@@ -37,6 +37,16 @@ Stops the RainbowColors:
 **Shortcut:** `strg + alt + r, e`<br>
 **Command:** `RainbowColors: Stop.`
 
+Pause the RainbowColors:
+
+**Shortcut:** `strg + alt + r, p`<br>
+**Command:** `RainbowColors: Pause.`
+
+Remove the RainbowColors:
+
+**Shortcut:** `strg + alt + r, q`<br>
+**Command:** `RainbowColors: Remove.`
+
 ![RainbowColors](doc/images/forground.gif)
 ![RainbowColors](doc/images/background.gif)
 
@@ -46,8 +56,10 @@ Stops the RainbowColors:
 
 | Name                                | Description                                                                                                    | Default Value |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------- |
-| `rainbowColors.mode`                | Defines which color change is to be carried. out.                                                              | Foreground    |
+| `rainbowColors.event`                | Defines which event executes the RainbowColor function.                                                              | interval    |
+| `rainbowColors.mode`                | Defines which color change is to be carried out.                                                              | foreground    |
 | `rainbowColors.interval`            | The interval (in seconds) between change the colors.                                                           | 5             |
+| `rainbowColors.numberOfKeystrokes`      | Specifies the number of keystrokes that must be performed before the colors changes.                                   | 3           |
 | `rainbowColors.numberOfColors`      | Specifies the number of colors to be used for generating the rainbow colors.                                   | 100           |
 | `rainbowColors.background`          | Defines which background areas should be changed.                                                              |               |
 | `rainbowColors.foreground`          | Defines which foreground (borders and shadows) areas are to be changed.                                        |               |

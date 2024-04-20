@@ -3,7 +3,7 @@ repository:
   name: VSCode-RainbowColors
 
   # A short description of the repository that will show up on GitHub
-  description: This extension changes the foreground or background color rainbowly after a certain interval.
+  description: This extension changes the foreground or background color rainbowly after a certain interval or a few keystrokes have been made.
 
   # A URL with more information about the repository
   homepage: https://dennykorsukewitz.github.io/VSCode-RainbowColors/
