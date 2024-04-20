@@ -9,12 +9,12 @@ on:
   workflow_dispatch:
     inputs:
       VSC_NAME:
-        required: false
+        required: true
         type: string
 
 jobs:
   Release:
-    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.release.znuny.yml@dev
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.release.vscode.yml@dev
     with:
       VSC_NAME: ${{ inputs.VSC_NAME || 'RainbowColors' }}
     secrets:
