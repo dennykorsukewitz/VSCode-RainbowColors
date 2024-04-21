@@ -33,22 +33,22 @@ When set to `interval`, the colors will change at a specified time interval.
 When set to `keystrokes`, the colors will change after a certain number of keystrokes have been made.
 You can customize this setting according to your preference by modifying the value of `rainbowColors.event` in the extension's settings.
 
-### Start RainbowColors:
+### Start RainbowColors
 
 **Shortcut:** `strg + alt + r, s`<br>
 **Command:** `RainbowColors: Start.`
 
-### Stop RainbowColors:
+### Stop RainbowColors
 
 **Shortcut:** `strg + alt + r, e`<br>
 **Command:** `RainbowColors: Stop.`
 
-### Pause RainbowColors:
+### Pause RainbowColors
 
 **Shortcut:** `strg + alt + r, p`<br>
 **Command:** `RainbowColors: Pause.`
 
-### Remove RainbowColors:
+### Remove RainbowColors
 
 **Shortcut:** `strg + alt + r, q`<br>
 **Command:** `RainbowColors: Remove.`
