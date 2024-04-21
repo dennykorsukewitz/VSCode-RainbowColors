@@ -27,22 +27,28 @@ I created this extension because I wanted to learn or expand my knowledge of the
 
 ## Feature
 
-Starts the RainbowColors:
+The `rainbowColors.event` setting defines which event triggers the RainbowColors function. This event determines when the foreground or background color changes in a rainbow pattern. The available options for this setting are `interval` and `keystrokes`.
+
+When set to `interval`, the colors will change at a specified time interval.
+When set to `keystrokes`, the colors will change after a certain number of keystrokes have been made.
+You can customize this setting according to your preference by modifying the value of `rainbowColors.event` in the extension's settings.
+
+### Start RainbowColors:
 
 **Shortcut:** `strg + alt + r, s`<br>
 **Command:** `RainbowColors: Start.`
 
-Stops the RainbowColors:
+### Stop RainbowColors:
 
 **Shortcut:** `strg + alt + r, e`<br>
 **Command:** `RainbowColors: Stop.`
 
-Pause the RainbowColors:
+### Pause RainbowColors:
 
 **Shortcut:** `strg + alt + r, p`<br>
 **Command:** `RainbowColors: Pause.`
 
-Remove the RainbowColors:
+### Remove RainbowColors:
 
 **Shortcut:** `strg + alt + r, q`<br>
 **Command:** `RainbowColors: Remove.`
