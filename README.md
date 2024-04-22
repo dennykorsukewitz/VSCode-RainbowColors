@@ -35,24 +35,34 @@ You can customize this setting according to your preference by modifying the val
 
 ### Start RainbowColors
 
+Starts the rainbow colors animation.
+
 **Shortcut:** `strg + alt + r, s`<br>
 **Command:** `RainbowColors: Start.`
 
 ### Stop RainbowColors
+
+Stops the rainbow colors animation and restores the original color customizations `workbench.colorCustomizations`.
 
 **Shortcut:** `strg + alt + r, e`<br>
 **Command:** `RainbowColors: Stop.`
 
 ### Pause RainbowColors
 
+Pauses the rainbow colors animation.
+The current color remains the same.
+
 **Shortcut:** `strg + alt + r, p`<br>
 **Command:** `RainbowColors: Pause.`
 
 ### Remove RainbowColors
 
+Removes rainbow colors from the VS Code workspace `workbench.colorCustomizations`.
+
 **Shortcut:** `strg + alt + r, q`<br>
 **Command:** `RainbowColors: Remove.`
 
+![RainbowColors](doc/images/keystrokes.gif)
 ![RainbowColors](doc/images/forground.gif)
 ![RainbowColors](doc/images/background.gif)
 
