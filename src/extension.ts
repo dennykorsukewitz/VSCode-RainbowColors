@@ -85,13 +85,25 @@ export function activate(context: vscode.ExtensionContext) {
         context.subscriptions.push(typeDisposable);
     }
 
-    // reload window after changing the settings with command 'workbench.action.reloadWindow'
-    context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
-        if (e.affectsConfiguration('rainbowColors.event') || e.affectsConfiguration('rainbowColors.mode')) {
-            vscode.commands.executeCommand("workbench.action.reloadWindow");
-        }
-    }));
+    /**
+    * Listen for configuration change in `rainbowColors.event` or `rainbowColors.mode` section
+    * When anything changes in the section, show a prompt to reload
+    * VSCode window via `workbench.action.reloadWindow` command
+    */
+    vscode.workspace.onDidChangeConfiguration(configChangeEvent => {
 
+        if (configChangeEvent.affectsConfiguration('rainbowColors.event') || configChangeEvent.affectsConfiguration('rainbowColors.mode')) {
+        const actions = ['Reload now', 'Later'];
+
+        vscode.window.showInformationMessage('The VSCode window needs to reload for the changes to take effect. Would you like to reload the window now?', ...actions)
+            .then(action => {
+
+                if (action === actions[0]) {
+                    vscode.commands.executeCommand('workbench.action.reloadWindow');
+                }
+            });
+        }
+    });
 }
 
 /**
