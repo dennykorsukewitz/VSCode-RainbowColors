@@ -2,7 +2,7 @@
   "name": "RainbowColors",
   "displayName": "Rainbow Colors",
   "description": "This extension changes the foreground or background color rainbowly after a certain interval or a few keystrokes have been made.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "dennykorsukewitz",
   "icon": "doc/images/icon.png",
   "license": "SEE LICENSE IN LICENSE",
