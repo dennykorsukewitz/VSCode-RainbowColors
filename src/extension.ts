@@ -16,20 +16,20 @@ let keystrokeCounter: number = 0;
 let timer: NodeJS.Timeout | undefined;
 
 let config = vscode.workspace.getConfiguration('rainbowColors');
-let background: { [key: string]: string } = config.get('background') as { [key: string]: string };
-let foreground: { [key: string]: string } = config.get('foreground') as { [key: string]: string };
-let custom: { [key: string]: string } = config.get('custom') as { [key: string]: string };
+let background: { [key: string]: string } = config.get('modeSettings.background') as { [key: string]: string };
+let foreground: { [key: string]: string } = config.get('modeSettings.foreground') as { [key: string]: string };
+let custom: { [key: string]: string } = config.get('modeSettings.custom') as { [key: string]: string };
 let event: string = config.get('event', 'interval');
 let mode: string = config.get('mode', 'foreground');
-let interval: number = config.get('interval', 5);
+let interval: number = config.get('interval.time', 5);
 let active: boolean = true;
 
 // This method is called when your extension is activated
 export function activate(context: vscode.ExtensionContext) {
 
     let config = vscode.workspace.getConfiguration('rainbowColors');
-    let background: { [key: string]: string } = config.get('background') as { [key: string]: string };
-    let foreground: { [key: string]: string } = config.get('foreground') as { [key: string]: string };
+    let background: { [key: string]: string } = config.get('modeSettings.background') as { [key: string]: string };
+    let foreground: { [key: string]: string } = config.get('modeSettings.foreground') as { [key: string]: string };
     let event: string = config.get('event', 'interval');
     let mode: string = config.get('mode', 'foreground');
     let interval: number = config.get('interval', 5);
@@ -73,9 +73,10 @@ export function activate(context: vscode.ExtensionContext) {
                 text: args.text
             });
 
-            const numberOfKeystrokes: number = config.get('numberOfKeystrokes', 3);
+            const numberOfKeystrokes: number = config.get('keystroke.numberOfKeystrokes', 3);
             keystrokeCounter += 1;
 
+            // if active and the number of keystrokes is reached, set rainbow colors
             if (active && keystrokeCounter >= numberOfKeystrokes) {
                 setRainbowColors();
                 keystrokeCounter = 0;
@@ -265,6 +266,24 @@ function setRainbowColors() {
     if (mode === 'foreground') {
         Object.keys(foreground).forEach(key => {
             if (foreground[key]) {
+                colorCustomizations[key] = colors['primaryColor'];
+            }
+        });
+    }
+
+    if (mode === 'custom') {
+        let custom: { [key: string]: string } = config.get('modeSettings.custom') as { [key: string]: string };
+
+        console.log('DENNY');
+        console.log('custom');
+        console.log(custom);
+
+        // return if custom is not set
+        if (!custom) {
+            return;
+        }
+        Object.keys(custom).forEach(key => {
+            if (custom[key]) {
                 colorCustomizations[key] = colors['primaryColor'];
             }
         });

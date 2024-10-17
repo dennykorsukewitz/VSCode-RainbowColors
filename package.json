@@ -115,11 +115,13 @@
           "default": "interval",
           "enum": [
             "off",
+            "one-time",
             "interval",
             "keystroke"
           ],
           "enumDescriptions": [
             "Deactivates the RainbowColor function.",
+            "Set the RainbowColor only one time.",
             "Starts the RainbowColor function at an interval.",
             "Starts the RainbowColor function only with key input (keystrokes)."
           ]
@@ -131,24 +133,16 @@
           "default": "foreground",
           "enum": [
             "foreground",
-            "background"
+            "background",
+            "folders",
+            "custom"
           ],
           "enumDescriptions": [
             "Only changes the color of the foreground.",
-            "Changes the color of the background. The text is displayed with the corresponding complementary color so that it remains legible."
+            "Changes the color of the background. The text is displayed with the corresponding complementary color so that it remains legible.",
+            "folders TODO",
+            "custom todo"
           ]
-        },
-        "rainbowColors.numberOfKeystrokes": {
-          "order": 3,
-          "description": "Specifies the number of keystrokes that must be performed before the colors changes.",
-          "type": "number",
-          "default": 3
-        },
-        "rainbowColors.interval": {
-          "order": 4,
-          "description": "The interval (in seconds) between change the colors.",
-          "type": "number",
-          "default": 5
         },
         "rainbowColors.numberOfColors": {
           "order": 5,
@@ -156,14 +150,89 @@
           "type": "number",
           "default": 100
         },
+        "rainbowColors.keystroke.numberOfKeystrokes": {
+          "order": 3,
+          "markdownDescription": "Event: Keystroke - Specifies the number of keystrokes that must be performed before the colors changes. Only needed when `#rainbowColors.event#` is set to `keystroke`.",
+          "type": "number",
+          "default": 3
+        },
+        "rainbowColors.interval.time": {
+          "order": 4,
+          "markdownDescription": "The interval (in seconds) between change the colors. Only needed when `#rainbowColors.event#` is set to `interval`.",
+          "type": "number",
+          "default": 5
+        },
         "rainbowColors.colorCustomizations": {
           "order": 6,
           "description": "This is the original setting. (Overrides colors from the currently selected color theme.).",
           "type": "object",
           "properties": {}
         },
-        "rainbowColors.background": {
+        "rainbowColors.modeSettings.custom": {
           "order": 7,
+          "description": "Defines your own areas that are to be changed. This is just one example.",
+          "type": "object",
+          "additionalProperties": true,
+          "default": {
+            "contrastActiveBorder": true,
+            "contrastBorder": true,
+            "focusBorder": true,
+            "foreground": true,
+            "welcomePage.progress.foreground": true,
+            "textLink.foreground": true,
+            "textPreformat.foreground": true,
+            "textSeparator.foreground": true,
+            "button.foreground": true,
+            "checkbox.foreground": true,
+            "dropdown.foreground": true,
+            "input.foreground": true,
+            "badge.foreground": true,
+            "activityBar.foreground": true,
+            "activityBarBadge.foreground": true,
+            "profileBadge.foreground": true,
+            "sideBar.foreground": true,
+            "sideBarTitle.foreground": true,
+            "sideBarSectionHeader.foreground": true,
+            "editorLineNumber.foreground": true,
+            "editorCursor.foreground": true,
+            "editorInlayHint.foreground": true,
+            "editorRuler.foreground": true,
+            "editorCodeLens.foreground": true,
+            "editorLightBulb.foreground": true,
+            "editorLightBulbAutoFix.foreground": true,
+            "editorLightBulbAi.foreground": true,
+            "editorBracketHighlight.unexpectedBracket.foreground": true,
+            "editorError.foreground": true,
+            "editorWarning.foreground": true,
+            "editorInfo.foreground": true,
+            "editorHint.foreground": true,
+            "editorWidget.foreground": true,
+            "editorSuggestWidget.foreground": true,
+            "editorSuggestWidgetStatus.foreground": true,
+            "editorHoverWidget.foreground": true,
+            "editorGhostText.foreground": true,
+            "peekViewTitleDescription.foreground": true,
+            "peekViewTitleLabel.foreground": true,
+            "panelSectionHeader.foreground": true,
+            "statusBar.foreground": true,
+            "menu.foreground": true,
+            "commandCenter.foreground": true,
+            "notificationCenterHeader.foreground": true,
+            "notifications.foreground": true,
+            "notificationLink.foreground": true,
+            "banner.foreground": true,
+            "extensionButton.foreground": true,
+            "pickerGroup.foreground": true,
+            "quickInput.foreground": true,
+            "keybindingLabel.foreground": true,
+            "terminalCursor.foreground": true,
+            "walkthrough.stepTitle.foreground": true,
+            "breadcrumb.foreground": true,
+            "charts.foreground": true
+          }
+        },
+        "rainbowColors.modeSettings.background": {
+          "order": 8,
           "description": "Defines which background areas should be changed.",
           "type": "object",
           "additionalProperties": false,
@@ -1517,8 +1586,8 @@
             "actionBar.toggledBackground": true
           }
         },
-        "rainbowColors.foreground": {
-          "order": 8,
+        "rainbowColors.modeSettings.foreground": {
+          "order": 9,
           "description": "Defines which foreground (border|shadow) areas are to be changed.",
           "type": "object",
           "additionalProperties": false,
