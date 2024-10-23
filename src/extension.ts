@@ -16,9 +16,6 @@ let keystrokeCounter: number = 0;
 let timer: NodeJS.Timeout | undefined;
 
 let config = vscode.workspace.getConfiguration('rainbowColors');
-let background: { [key: string]: string } = config.get('modeSettings.background') as { [key: string]: string };
-let foreground: { [key: string]: string } = config.get('modeSettings.foreground') as { [key: string]: string };
-let custom: { [key: string]: string } = config.get('modeSettings.custom') as { [key: string]: string };
 let event: string = config.get('event', 'interval');
 let mode: string = config.get('mode', 'foreground');
 let interval: number = config.get('interval.time', 5);
@@ -28,8 +25,6 @@ let active: boolean = true;
 export function activate(context: vscode.ExtensionContext) {
 
     let config = vscode.workspace.getConfiguration('rainbowColors');
-    let background: { [key: string]: string } = config.get('modeSettings.background') as { [key: string]: string };
-    let foreground: { [key: string]: string } = config.get('modeSettings.foreground') as { [key: string]: string };
     let event: string = config.get('event', 'interval');
     let mode: string = config.get('mode', 'foreground');
     let interval: number = config.get('interval', 5);
@@ -67,8 +62,6 @@ export function activate(context: vscode.ExtensionContext) {
     if (event === 'keystroke') {
         let typeDisposable = vscode.commands.registerCommand("type", (args) => {
 
-            console.log('type', args.text);
-
             vscode.commands.executeCommand("default:type", {
                 text: args.text
             });
@@ -100,22 +93,13 @@ export function activate(context: vscode.ExtensionContext) {
             .then(action => {
 
                 if (action === actions[0]) {
+                    vscode.commands.executeCommand('RainbowColors.remove');
                     vscode.commands.executeCommand('workbench.action.reloadWindow');
+                    vscode.commands.executeCommand('RainbowColors.start');
                 }
             });
         }
     });
-}
-
-/**
- * Removes rainbow colors from the VS Code workspace.
- */
-function removeRainbowColors() {
-
-    active = false;
-
-    let colorCustomizationsOriginal = {};
-    vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizationsOriginal, true);
 }
 
 /**
@@ -137,6 +121,12 @@ function startRainbowColors() {
         timer = setInterval(() => {
             setRainbowColors();
         }, interval * 1000);
+    }
+
+    if (event === 'one-time') {
+        colorCounter = 0;
+        rainbowColors = [];
+        setRainbowColors();
     }
 }
 
@@ -166,6 +156,17 @@ function stopRainbowColors() {
     }
 
     let colorCustomizationsOriginal = vscode.workspace.getConfiguration().get('rainbowColors.colorCustomizations');
+    vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizationsOriginal, true);
+}
+
+/**
+ * Removes rainbow colors from the VS Code workspace.
+ */
+function removeRainbowColors() {
+
+    active = false;
+
+    let colorCustomizationsOriginal = {};
     vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizationsOriginal, true);
 }
 
@@ -205,8 +206,7 @@ function getPrimaryColor() {
     if (colorCounter >= numberOfColors) {
         colorCounter = 0;
     }
-
-    if (!rainbowColors) {
+    if (!rainbowColors || rainbowColors.length === 0) {
         var rainbowColorsArray = rainbow(numberOfColors, "hex", false);
         rainbowColors = rainbowColorsArray.map((color: { hex: string }) => color.hex);
     }
@@ -250,7 +250,13 @@ function setRainbowColors() {
     let colors = getColors();
     let colorCustomizations: { [key: string]: string } = vscode.workspace.getConfiguration().get('workbench.colorCustomizations') || {};
 
-    if (mode === 'background') {
+    if (mode === 'folder') {
+        // TODO
+    }
+    else if (mode === 'background') {
+        let background: { [key: string]: string } = config.get('modeSettings.background') as { [key: string]: string };
+        let foreground: { [key: string]: string } = config.get('modeSettings.foreground') as { [key: string]: string };
+
         Object.keys(background).forEach(key => {
             if (background[key]) {
                 colorCustomizations[key] = colors['primaryColor'];
@@ -261,35 +267,24 @@ function setRainbowColors() {
                 colorCustomizations[key] = colors['complementaryColor'];
             }
         });
+        vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizations, true);
     }
 
-    if (mode === 'foreground') {
-        Object.keys(foreground).forEach(key => {
-            if (foreground[key]) {
-                colorCustomizations[key] = colors['primaryColor'];
-            }
-        });
-    }
+    else{
 
-    if (mode === 'custom') {
-        let custom: { [key: string]: string } = config.get('modeSettings.custom') as { [key: string]: string };
-
-        console.log('DENNY');
-        console.log('custom');
-        console.log(custom);
+        let modeSettings: { [key: string]: string } = config.get('modeSettings.' + mode) as { [key: string]: string };
 
         // return if custom is not set
-        if (!custom) {
+        if (!modeSettings) {
             return;
         }
-        Object.keys(custom).forEach(key => {
-            if (custom[key]) {
+        Object.keys(modeSettings).forEach(key => {
+            if (modeSettings[key]) {
                 colorCustomizations[key] = colors['primaryColor'];
             }
         });
+        vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizations, true);
     }
-
-    vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizations, true);
 }
 
 // This method is called when your extension is deactivated
