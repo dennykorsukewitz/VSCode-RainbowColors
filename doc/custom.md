@@ -142,7 +142,6 @@ Changes Editor colors.
   },
 ```
 
-
 ## All
 
 Please, do not use this configuration, otherwise your VSCode is in a uniform color.
