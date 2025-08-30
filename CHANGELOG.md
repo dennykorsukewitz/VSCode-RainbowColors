@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - TODO
+
+### Changed
+
+### Dependencies
+
+- Bump @vscode/test-cli from 0.0.4 to 0.0.10 (#1)
+- Bump esbuild from 0.20.2 to 0.25.2 (#17)
+- Bump @types/node from 18.19.86 to 22.13.17 (#18)
+- Bump @typescript-eslint/eslint-plugin from 6.21.0 to 8.29.0 (#20)
+- Bump @typescript-eslint/parser from 6.21.0 to 8.29.0 (#19)
+
 ## [1.0.1] - 2024-04-23
 
 ### Changed
