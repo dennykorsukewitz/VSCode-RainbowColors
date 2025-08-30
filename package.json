@@ -53,13 +53,13 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
-    "@types/node": "^18.19.8",
+    "@types/node": "^22.13.17",
     "@types/vscode": "^1.85.0",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
-    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.3.9",
-    "esbuild": "^0.20.0",
+    "esbuild": "^0.25.2",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
   },
