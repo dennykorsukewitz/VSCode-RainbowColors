@@ -9,7 +9,20 @@
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": [
-                "${workspaceFolder}/out/**/*.js"
+                "${workspaceFolder}/dist/**/*.js"
+            ],
+            "preLaunchTask": "npm: build"
+        },
+        {
+            "name": "Run Sandbox Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--disable-extensions"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
             ],
             "preLaunchTask": "npm: build"
         },
@@ -23,9 +36,15 @@
                 "--extensionDevelopmentKind=web"
             ],
             "outFiles": [
-                "${workspaceFolder}/out/web/**/*.js"
+                "${workspaceFolder}/dist/**/*.js"
             ],
             "preLaunchTask": "npm: build-web"
+        },
+        {
+            "name": "Run Tests",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run test"
         }
     ]
 }
