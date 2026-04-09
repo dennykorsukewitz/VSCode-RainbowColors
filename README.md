@@ -1,6 +1,6 @@
-<img align="right" width="150" height="150" src="doc/images/icon.png" alt="RainbowColors Icon">>
-
 # RainbowColors
+
+<img align="right" width="150" height="150" src="doc/images/Icon.png" alt="RainbowColors Icon">
 
 **RainbowColors** is an extension that changes the foreground or background color rainbowly after a certain interval or a few keystrokes have been made.
 
@@ -21,8 +21,8 @@ I created this extension because I wanted to learn or expand my knowledge of the
 | ![GitHub language count](https://img.shields.io/github/languages/count/dennykorsukewitz/VSCode-RainbowColors?style=flat&label=language) | ![GitHub contributors](https://img.shields.io/github/contributors/dennykorsukewitz/VSCode-RainbowColors)                                                                                                                                              | ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/dennykorsukewitz.RainbowColors) ![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/dennykorsukewitz.RainbowColors)        |
 | ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dennykorsukewitz/VSCode-RainbowColors)                   | ![GitHub downloads](https://img.shields.io/github/downloads/dennykorsukewitz/VSCode-RainbowColors/total?style=flat)                                                                                                                                   | ![VSC marketplace download](https://img.shields.io/visual-studio-marketplace/d/dennykorsukewitz.RainbowColors) ![VSC marketplace install](https://img.shields.io/visual-studio-marketplace/i/dennykorsukewitz.RainbowColors)                                     |
 
-| Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status |
+| --- |
 | [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-RainbowColors/2.0.0/dev)](https://github.com/dennykorsukewitz/VSCode-RainbowColors/compare/2.0.0...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-RainbowColors/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
 
 ## Feature
@@ -62,9 +62,9 @@ Removes rainbow colors from the VS Code workspace `workbench.colorCustomizations
 **Shortcut:** `strg + alt + r, q`<br>
 **Command:** `RainbowColors: Remove.`
 
-![RainbowColors](doc/images/keystrokes.gif)
-![RainbowColors](doc/images/forground.gif)
-![RainbowColors](doc/images/background.gif)
+![RainbowColors](doc/images/Keystrokes.gif)
+![RainbowColors](doc/images/Foreground.gif)
+![RainbowColors](doc/images/Background.gif)
 
 ### Settings
 
@@ -81,7 +81,7 @@ Removes rainbow colors from the VS Code workspace `workbench.colorCustomizations
 | `rainbowColors.foreground`          | Defines which foreground (borders and shadows) areas are to be changed.                                        |               |
 | `rainbowColors.colorCustomizations` | This is the original colorCustomizations setting. (Overrides colors from the currently selected color theme.). |               |
 
-![Settings](doc/images/settings.png)
+![Settings](doc/images/Settings.png)
 
 ---
 

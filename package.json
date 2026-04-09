@@ -4,7 +4,7 @@
   "description": "This extension changes the foreground or background color rainbowly after a certain interval or a few keystrokes have been made.",
   "version": "2.0.0",
   "publisher": "dennykorsukewitz",
-  "icon": "doc/images/icon.png",
+  "icon": "doc/images/Icon.png",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/dennykorsukewitz/VSCode-RainbowColors/blob/dev/README.md",
   "pricing": "Free",
