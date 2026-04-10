@@ -245,8 +245,8 @@ You can customize your active Visual Studio Code color theme with the workbench.
 | `editor.lineHighlightBackground` | Background color for the highlight of line at the cursor position. |
 | `editor.lineHighlightBorder` | Background color for the border around the line at the cursor position. |
 | `editorWatermark.foreground` | Foreground color for the labels in the editor watermark. |
-| `editorUnicodeHighlight.border` | Border color used to highlight unicode characters. |
-| `editorUnicodeHighlight.background` | Background color used to highlight unicode characters. |
+| `editorUnicodeHighlight.border` | Border color used to highlight Unicode characters. |
+| `editorUnicodeHighlight.background` | Background color used to highlight Unicode characters. |
 | `editorLink.activeForeground` | Color of active links. |
 | `editor.rangeHighlightBackground` | Background color of highlighted ranges, used by Quick Open, Symbol in File and Find features. The color must not be opaque so as not to hide underlying decorations. |
 | `editor.rangeHighlightBorder` | Background color of the border around highlighted ranges. |
@@ -277,7 +277,7 @@ You can customize your active Visual Studio Code color theme with the workbench.
 | `editor.linkedEditingBackground` | Background color when the editor is in linked editing mode. |
 | `editorCodeLens.foreground` | Foreground color of an editor CodeLens. |
 | `editorLightBulb.foreground` | The color used for the lightbulb actions icon. |
-| `editorLightBulbAutoFix.foreground` | The color used for the lightbulb auto fix actions icon. |
+| `editorLightBulbAutoFix.foreground` | The color used for the lightbulb autofix actions icon. |
 | `editorLightBulbAi.foreground` | The color used for the lightbulb AI icon. |
 | `editorBracketMatch.background` | Background color behind matching brackets. |
 | `editorBracketMatch.border` | Color for matching brackets boxes. |
@@ -562,7 +562,7 @@ You can customize your active Visual Studio Code color theme with the workbench.
 | `extensionBadge.remoteForeground` | Foreground color for the remote badge in the extensions view. |
 | `extensionIcon.starForeground` | The icon color for extension ratings. |
 | `extensionIcon.verifiedForeground` | The icon color for extension verified publisher. |
-| `extensionIcon.preReleaseForeground` | The icon color for pre-release extension. |
+| `extensionIcon.preReleaseForeground` | The icon color for prerelease extension. |
 | `extensionIcon.sponsorForeground` | The icon color for extension sponsor. |
 | `pickerGroup.border` | Quick picker (Quick Open) color for grouping borders. |
 | `pickerGroup.foreground` | Quick picker (Quick Open) color for grouping labels. |
@@ -680,8 +680,8 @@ You can customize your active Visual Studio Code color theme with the workbench.
 | `gitDecoration.modifiedResourceForeground` | Color for modified Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.deletedResourceForeground` | Color for deleted Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.renamedResourceForeground` | Color for renamed or copied Git resources. Used for file labels and the SCM viewlet. |
-| `gitDecoration.stageModifiedResourceForeground` | Color for staged modifications git decorations. Used for file labels and the SCM viewlet. |
-| `gitDecoration.stageDeletedResourceForeground` | Color for staged deletions git decorations. Used for file labels and the SCM viewlet. |
+| `gitDecoration.stageModifiedResourceForeground` | Color for staged modifications Git decorations. Used for file labels and the SCM viewlet. |
+| `gitDecoration.stageDeletedResourceForeground` | Color for staged deletions Git decorations. Used for file labels and the SCM viewlet. |
 | `gitDecoration.untrackedResourceForeground` | Color for untracked Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.ignoredResourceForeground` | Color for ignored Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.conflictingResourceForeground` | Color for conflicting Git resources. Used for file labels and the SCM viewlet. |

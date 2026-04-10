@@ -144,7 +144,7 @@ Changes Editor colors.
 
 ## All
 
-Please, do not use this configuration, otherwise your VSCode is in a uniform color.
+Please, do not use this configuration, otherwise your Visual Studio Code is in a uniform color.
 
 ```json
   "rainbowColors.modeSettings.custom": {

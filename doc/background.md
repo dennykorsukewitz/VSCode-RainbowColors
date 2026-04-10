@@ -77,7 +77,7 @@
 | `editor.hoverHighlightBackground` | Highlight below the word for which a hover is shown. The color must not be opaque so as not to hide underlying decorations. |
 | `editor.lineHighlightBackground` | Background color for the highlight of line at the cursor position. |
 | `editor.lineHighlightBorder` | Background color for the border around the line at the cursor position. |
-| `editorUnicodeHighlight.background` | Background color used to highlight unicode characters. |
+| `editorUnicodeHighlight.background` | Background color used to highlight Unicode characters. |
 | `editor.rangeHighlightBackground` | Background color of highlighted ranges, used by Quick Open, Symbol in File and Find features. The color must not be opaque so as not to hide underlying decorations. |
 | `editor.rangeHighlightBorder` | Background color of the border around highlighted ranges. |
 | `editor.symbolHighlightBackground` | Background color of highlighted symbol. The color must not be opaque so as not to hide underlying decorations. |

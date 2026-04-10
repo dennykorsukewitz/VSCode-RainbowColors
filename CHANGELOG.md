@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- **configuration**: Extended JSON schema definitions for all VSCode color configurations
+- **configuration**: Extended JSON schema definitions for all Visual Studio Code color configurations
   - Added schema for over 300 background color tokens
   - Added schema for over 200 foreground color tokens
   - Added schema for custom color configurations
@@ -48,7 +48,7 @@ All notable changes to this project will be documented in this file.
 - Bump @typescript-eslint/eslint-plugin from 6.21.0 to 8.29.0 (#20)
 - Bump @typescript-eslint/parser from 6.21.0 to 8.29.0 (#19)
 
-### Bug Fixes
+### Bugfixes
 
 - **configuration**: Correct handling of configuration structure
 - **keystroke handling**: Improved handling of keyboard events without debug outputs
@@ -95,7 +95,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Use rainbow-colors-array-ts instead of rainbow-colors-array.
-- Added and updated VSCode internal launch and task.
+- Added and updated Visual Studio Code internal launch and task.
 - Tidied Package.
 
 ## [0.0.2] - 2024-02-01

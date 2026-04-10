@@ -4,7 +4,7 @@
 
 ### Features
 
-- **configuration**: Extended JSON schema definitions for all VSCode color configurations
+- **configuration**: Extended JSON schema definitions for all Visual Studio Code color configurations
   - Added schema for over 300 background color tokens
   - Added schema for over 200 foreground color tokens
   - Added schema for custom color configurations
@@ -46,7 +46,7 @@
 - Bump @typescript-eslint/eslint-plugin from 6.21.0 to 8.29.0 (#20)
 - Bump @typescript-eslint/parser from 6.21.0 to 8.29.0 (#19)
 
-### Bug Fixes
+### Bugfixes
 
 - **configuration**: Correct handling of configuration structure
 - **keystroke handling**: Improved handling of keyboard events without debug outputs

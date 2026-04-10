@@ -8,11 +8,11 @@
 
 I created this extension because I wanted to learn or expand my knowledge of the following points:
 
-- Have fun developing vscode extensions with vscode.
+- Have fun developing Visual Studio Code extensions with Visual Studio Code.
 - TypeScript
 - Compiling with tsc
-- esbuild (bundling extensions used in VS Code for Web environments)
-- VSCode Testing
+- esbuild (bundling extensions used in Visual Studio Code for Web environments)
+- Visual Studio Code Testing
 
 | Repository| GitHub | Visual Studio Marketplace |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ The current color remains the same.
 
 ### Remove RainbowColors
 
-Removes rainbow colors from the VS Code workspace `workbench.colorCustomizations`.
+Removes rainbow colors from the Visual Studio Code workspace `workbench.colorCustomizations`.
 
 **Shortcut:** `strg + alt + r, q`<br>
 **Command:** `RainbowColors: Remove.`
@@ -103,7 +103,7 @@ Download latest [vsix file](https://github.com/dennykorsukewitz/VSCode-RainbowCo
 
 ### 3. Source code
 
-Download archive with the latest [release](https://github.com/dennykorsukewitz/VSCode-RainbowColors/releases) and unpack it to VisualStudioCode extensions folder
+Download archive with the latest [release](https://github.com/dennykorsukewitz/VSCode-RainbowColors/releases) and unpack it to Visual Studio Code extensions folder
 `$HOME/.vscode/extensions/`.
 
 ---

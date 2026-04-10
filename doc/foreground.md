@@ -127,7 +127,7 @@
 | `search.resultsInfoForeground` | Color of the text in the search viewlet's completion message. For example, this color is used in the text that says {x} results in {y} files. |
 | `searchEditor.findMatchBorder` | Border color of the editor's results. |
 | `searchEditor.textInputBorder` | Search editor text input box border. |
-| `editorUnicodeHighlight.border` | Border color used to highlight unicode characters. |
+| `editorUnicodeHighlight.border` | Border color used to highlight Unicode characters. |
 | `editorLink.activeForeground` | Color of active links. |
 | `editorWhitespace.foreground` | Color of whitespace characters in the editor. |
 | `editorInlayHint.foreground` | Foreground color of inline hints. |
@@ -136,7 +136,7 @@
 | `editorRuler.foreground` | Color of the editor rulers. |
 | `editorCodeLens.foreground` | Foreground color of an editor CodeLens. |
 | `editorLightBulb.foreground` | The color used for the lightbulb actions icon. |
-| `editorLightBulbAutoFix.foreground` | The color used for the lightbulb auto fix actions icon. |
+| `editorLightBulbAutoFix.foreground` | The color used for the lightbulb autofix actions icon. |
 | `editorLightBulbAi.foreground` | The color used for the lightbulb AI icon. |
 | `editorBracketMatch.border` | Color for matching brackets boxes. |
 | `editorBracketHighlight.foreground1` | Foreground color of brackets (1). Requires enabling bracket pair colorization. |
@@ -291,7 +291,7 @@
 | `extensionBadge.remoteForeground` | Foreground color for the remote badge in the extensions view. |
 | `extensionIcon.starForeground` | The icon color for extension ratings. |
 | `extensionIcon.verifiedForeground` | The icon color for extension verified publisher. |
-| `extensionIcon.preReleaseForeground` | The icon color for pre-release extension. |
+| `extensionIcon.preReleaseForeground` | The icon color for prerelease extension. |
 | `extensionIcon.sponsorForeground` | The icon color for extension sponsor. |
 | `pickerGroup.border` | Quick picker (Quick Open) color for grouping borders. |
 | `pickerGroup.foreground` | Quick picker (Quick Open) color for grouping labels. |
@@ -353,8 +353,8 @@
 | `gitDecoration.modifiedResourceForeground` | Color for modified Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.deletedResourceForeground` | Color for deleted Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.renamedResourceForeground` | Color for renamed or copied Git resources. Used for file labels and the SCM viewlet. |
-| `gitDecoration.stageModifiedResourceForeground` | Color for staged modifications git decorations. Used for file labels and the SCM viewlet. |
-| `gitDecoration.stageDeletedResourceForeground` | Color for staged deletions git decorations. Used for file labels and the SCM viewlet. |
+| `gitDecoration.stageModifiedResourceForeground` | Color for staged modifications Git decorations. Used for file labels and the SCM viewlet. |
+| `gitDecoration.stageDeletedResourceForeground` | Color for staged deletions Git decorations. Used for file labels and the SCM viewlet. |
 | `gitDecoration.untrackedResourceForeground` | Color for untracked Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.ignoredResourceForeground` | Color for ignored Git resources. Used for file labels and the SCM viewlet. |
 | `gitDecoration.conflictingResourceForeground` | Color for conflicting Git resources. Used for file labels and the SCM viewlet. |
