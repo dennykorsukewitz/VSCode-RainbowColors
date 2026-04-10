@@ -2,9 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## [1.1.0] - 2025-08-31
 
 ### Features
@@ -43,7 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `doc/foreground.md` - Special documentation for foreground colors
   - `doc/custom.md` - Guide for custom color configurations
 
-
 ### Dependencies
 
 - Bump @vscode/test-cli from 0.0.4 to 0.0.10 (#1)
@@ -57,13 +53,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **configuration**: Correct handling of configuration structure
 - **keystroke handling**: Improved handling of keyboard events without debug outputs
 
-
 ### ⚠️ Breaking Changes
 
 - **configuration**: Configuration keys were renamed for better structure:
   - `rainbowColors.interval` → `rainbowColors.interval.time`
   - `rainbowColors.numberOfKeystrokes` → `rainbowColors.keystroke.numberOfKeystrokes`
-
 
 ## [1.0.1] - 2024-04-23
 
