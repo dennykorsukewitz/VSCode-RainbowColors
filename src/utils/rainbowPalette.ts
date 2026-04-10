@@ -1,5 +1,5 @@
 /**
- * Rainbow palette generation and complementary color helpers (shared by decoration modes).
+ * Rainbow palette generation and complementary color helpers (workbench color modes).
  */
 
 import * as vscode from 'vscode';
@@ -27,17 +27,6 @@ export function createRainbowHexPalette(count: number): string[] {
     const n = normalizePaletteSize(count);
     const rainbowColorsArray = rainbow(n, 'hex', false);
     return rainbowColorsArray.map((c: { hex: string }) => c.hex);
-}
-
-/**
- * Starting index into the palette for folder-mode slot colors (matches previous buildFolderSlotColorPatch behavior).
- */
-export function folderSlotFrameIndex(colorCounter: number, paletteLength: number): number {
-    const n = paletteLength;
-    if (n < 1) {
-        return 0;
-    }
-    return ((colorCounter - 1) % n + n) % n;
 }
 
 export function getComplementaryColor(hex: string): string {

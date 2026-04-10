@@ -6,11 +6,6 @@
 
 import * as vscode from 'vscode';
 import {
-    FOLDER_SLOT_COLOR_IDS,
-    getEffectiveFolderSlotCount,
-    type FolderDecorationController,
-} from './folder';
-import {
     MODE_SETTINGS_BACKGROUND,
     MODE_SETTINGS_BORDER,
     MODE_SETTINGS_FOREGROUND,
@@ -18,7 +13,6 @@ import {
 } from '../modeSettings';
 import {
     createRainbowHexPalette,
-    folderSlotFrameIndex,
     getComplementaryColor,
     readNumberOfColorsForPalette,
 } from '../utils/rainbowPalette';
@@ -40,17 +34,7 @@ let lastRainbowPatch: Record<string, string> | undefined;
 
 let active: boolean = true;
 
-let folderDecorationController: FolderDecorationController | undefined;
-
 const KEYSTROKE_DEBOUNCE_MS = 32;
-
-export function isFolderModeActiveForExplorer(): boolean {
-    return active && getRainbowConfig().get<string>('mode', 'foreground') === 'folder';
-}
-
-export function setFolderDecorationController(controller: FolderDecorationController | undefined): void {
-    folderDecorationController = controller;
-}
 
 export function initWorkbenchColors(context: vscode.ExtensionContext): void {
 
@@ -198,7 +182,6 @@ function pauseRainbowColors() {
         clearTimeout(keystrokeDebounceTimer);
         keystrokeDebounceTimer = undefined;
     }
-    folderDecorationController?.notifyAllChanged();
 }
 
 function stopRainbowColors() {
@@ -217,7 +200,6 @@ function stopRainbowColors() {
 
     let colorCustomizationsOriginal = vscode.workspace.getConfiguration().get('rainbowColors.colorCustomizations');
     vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizationsOriginal, true);
-    folderDecorationController?.notifyAllChanged();
 }
 
 function removeRainbowColors() {
@@ -236,7 +218,6 @@ function removeRainbowColors() {
 
     let colorCustomizationsOriginal = {};
     vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizationsOriginal, true);
-    folderDecorationController?.notifyAllChanged();
 }
 
 function getColors() {
@@ -294,9 +275,6 @@ function buildRainbowPatch(colors: { primaryColor: string; complementaryColor: s
     const mode = cfg.get<string>('mode', 'foreground');
     const patch: Record<string, string> = {};
 
-    if (mode === 'folder') {
-        return buildFolderSlotColorPatch();
-    }
     if (mode === 'background') {
         addFlaggedColorEntries(MODE_SETTINGS_BACKGROUND, patch, colors.primaryColor);
         addFlaggedColorEntries(MODE_SETTINGS_FOREGROUND, patch, colors.complementaryColor);
@@ -321,27 +299,6 @@ function buildRainbowPatch(colors: { primaryColor: string; complementaryColor: s
     }
 
     return undefined;
-}
-
-function buildFolderSlotColorPatch(): Record<string, string> {
-    const cfg = getRainbowConfig();
-    const numberOfColors: number = readNumberOfColorsForPalette(cfg);
-
-    if (!rainbowColors || rainbowColors.length === 0) {
-        rainbowColors = createRainbowHexPalette(numberOfColors);
-    }
-
-    const patch: Record<string, string> = {};
-    const n = rainbowColors.length;
-    const frame = folderSlotFrameIndex(colorCounter, n);
-    const slotCount = getEffectiveFolderSlotCount(cfg);
-
-    for (let i = 0; i < slotCount; i++) {
-        const hex = rainbowColors[(frame + i) % n];
-        patch[FOLDER_SLOT_COLOR_IDS[i]] = hex;
-    }
-
-    return patch;
 }
 
 function rainbowPatchEquals(a: Record<string, string> | undefined, b: Record<string, string> | undefined): boolean {
@@ -374,7 +331,6 @@ function applyRainbowColorsToWorkbench() {
     try {
 
         const cfg = getRainbowConfig();
-        const mode = cfg.get<string>('mode', 'foreground');
 
         const colors = getColors();
 
@@ -393,10 +349,6 @@ function applyRainbowColorsToWorkbench() {
 
         lastRainbowPatch = { ...patch };
         vscode.workspace.getConfiguration().update('workbench.colorCustomizations', colorCustomizations, true);
-
-        if (mode === 'folder') {
-            folderDecorationController?.notifyAllChanged();
-        }
     } finally {
         applyingRainbow = false;
     }
